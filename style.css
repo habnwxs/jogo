@@ -1,0 +1,44 @@
+:root{
+  --size: 64px; /* tamanho de cada casa */
+  --light:#f0d9b5;
+  --dark:#b58863;
+  --accent:#7cc7ff;
+}
+body{
+  font-family:system-ui,Segoe UI,Roboto,Arial;
+  margin:20px;
+  background:#f7f7f7;
+  color:#222
+}
+h1{font-size:18px;margin-bottom:8px}
+.board-wrap{display:flex;gap:20px;align-items:flex-start}
+.board{
+  display:grid;
+  grid-template-columns:repeat(8,var(--size));
+  grid-template-rows:repeat(8,var(--size));
+  border:4px solid #333;
+  box-shadow:0 6px 18px rgba(0,0,0,0.12)
+}
+.square{
+  width:var(--size);
+  height:var(--size);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:28px;
+  user-select:none
+}
+.square.light{background:var(--light)}
+.square.dark{background:var(--dark)}
+.square.highlight{outline:3px solid var(--accent);outline-offset:-3px}
+.square.possible{box-shadow:inset 0 0 0 3px rgba(0,0,0,0.05)}
+.piece{cursor:pointer;font-size:30px;line-height:1}
+.info{max-width:300px}
+button{
+  padding:6px 12px;
+  border-radius:6px;
+  border:1px solid #ccc;
+  background:white;
+  cursor:pointer
+}
+.small{font-size:13px;color:#555}
