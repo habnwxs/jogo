@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Jogo de Xadrez</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Jogo de Xadrez — clique para selecionar uma peça e depois o destino</h1>
+  <div class="board-wrap">
+    <div id="board" class="board" aria-label="Tabuleiro de xadrez"></div>
+    <div class="info">
+      <div class="small"><strong>Controles:</strong></div>
+      <ul class="small">
+        <li>Clique em uma peça do seu turno (brancas começam).</li>
+        <li>Depois clique na casa de destino para mover.</li>
+        <li>Capturas são automáticas. Promoção de peão vira dama automaticamente.</li>
+        <li>Regras avançadas (roque, en-passant e xeque/mate) não implementadas.</li>
+      </ul>
+      <p class="small">Turno atual: <span id="turn">Brancas</span></p>
+      <button id="resetBtn">Resetar jogo</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
